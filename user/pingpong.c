@@ -1,4 +1,4 @@
-#include "kernel/types.h"
+  #include "kernel/types.h"
 #include "kernel/stat.h"
 #include "user/user.h"
 
@@ -7,7 +7,8 @@ main(int argc, char *argv[])
 {
   int p1[2];
   int p2[2];
-  if (-1 == pipe(p1) || -1 == pipe(p2)) {
+
+  if (pipe(p1) == -1 || pipe(p2) == -1) {
     write(2, "error\n", 6);
   }
 
@@ -16,11 +17,14 @@ main(int argc, char *argv[])
     read(p2[0], buf, 1);
     printf("%d: received ping\n", getpid());
     write(p1[1], "x", 1);
-  } else {
+  }else{
     write(p2[1], "x", 1);
     char buf[1];
     read(p1[0], buf, 1);
     printf("%d: received pong\n", getpid());
   }
   exit(0);
+
 }
+
+

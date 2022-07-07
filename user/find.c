@@ -27,7 +27,7 @@ int contains(char *text, char *pattern)
 
 void find(char *path, char *pattern)
 {
-  fprintf(2, "find:30 %s %s\n", path, pattern);
+  //fprintf(2, "find:30 %s %s\n", path, pattern);
   char buf[512], *p;
   int fd;
   struct dirent de;

@@ -42,8 +42,5 @@ main() {
   }
   close(p[1]);
   f(p);
-
-
-
   exit(0);
 }
