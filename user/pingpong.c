@@ -1,4 +1,4 @@
-  #include "kernel/types.h"
+#include "kernel/types.h"
 #include "kernel/stat.h"
 #include "user/user.h"
 
@@ -24,7 +24,6 @@ main(int argc, char *argv[])
     printf("%d: received pong\n", getpid());
   }
   exit(0);
-
 }
 
 
