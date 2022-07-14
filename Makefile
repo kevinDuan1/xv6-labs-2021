@@ -201,6 +201,7 @@ UPROGS=\
 	$U/_xargg\
 	$U/_prime\
 	$U/_findd\
+	$U/_trace\
 
 
 ifeq ($(LAB),$(filter $(LAB), pgtbl lock))
